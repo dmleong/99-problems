@@ -1,0 +1,7 @@
+-- Needs to be converted to PHP
+
+Write a program that obtains two positive integer values, one from argv[1] and the other from argv[2]. The second 
+number is a single digit. Recall that these numbers will have a “string” type and thus they could be converted to a 
+two’s complement representation(a type integer). Your program is to determine the number of times the single digit 
+found in argv[2] occurs within the integer value contained in argv[1]. For example, the digit 3 occurs 4 times within 
+the number 89323313.

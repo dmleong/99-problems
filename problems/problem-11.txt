@@ -1,0 +1,10 @@
+Write a PHP program that will sum up the integers on the command line. For example, suppose the program is 
+launched with 
+
+% php solution-11.php 4 511 6 <ret> 
+
+then your program should output the number 521. If the program is launched with 
+
+% php solution-11.php 1 4 9 16 25 36 <ret>
+
+then your program should output the number 58.

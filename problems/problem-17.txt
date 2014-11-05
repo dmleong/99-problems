@@ -1,0 +1,25 @@
+For this problem, you are to translate a paragraph of ordinary English text into Pig Latin. Unlike real Latin, the 
+translation rules for Pig Latin are simple. 
+
+• If a word starts with a consonant, then translate the word by placing the initial letter at the end of the word and 
+appending “ay”. Example: cow becomes owcay and blank becomes lankay. 
+
+• If a word starts with a vowel, then simply append “way” to the word. Example: apple beomes appleway and order 
+becomes orderway.
+
+The letter y should be considered to be a consonant.
+
+The input format of the text is a series of lines, each line containing a set of words to be translated. A line 
+containing five periods indicates the end of the data. For example,
+
+the quick brown fox
+jumped over the lazy dog
+because it would not move
+
+The name of a file containing the text will come into your program via argv[1].
+
+Words will be separated by one or more blanks.
+
+No other punctuation will be used.
+
+Of course, the newline character \n is used to end a line.

@@ -1,0 +1,5 @@
+Create a file called stack.h. Create a file called stack.c Together they will form a non-polymorphic stack module 
+that can push and pop single characters. This was discussed in class. Use these two files in conjunction with main.c 
+to build a parenthesis checker to determine if parenthetical are balanced or not. The only symbols are (, ), {, }, [, 
+and ]. In addition to these three files, I want you to create a makefile as was also discussed in class. Remember! 
+Come to class! When you submit your program, you should submit your makefile.

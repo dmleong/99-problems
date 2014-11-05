@@ -1,0 +1,8 @@
+You are to write a C program that enters a positive integer via the command line. Remember this number comes 
+into your program as a string. You should malloc up enough space to create an array big enough to hold n integers. 
+You should call the random number generator, rand(), to fill that array with random numbers between 0 and 99,999. 
+After the array has been filled, you should call a bubblesort sorting function which will sort the numbers into 
+ascending order. Your program should output the smallest number, the largest number, and the median value of the 
+numbers. Recall, that the median value of an odd number of numbers is the middle number. The median value of an 
+even number of numbers is the average of the middle two numbers. The bubblesort algorithm you should write is a 
+straight bubblesort -- like the one we discussed in class. Do not increased its speed with special optimizations.

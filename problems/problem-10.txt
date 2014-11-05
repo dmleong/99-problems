@@ -1,0 +1,17 @@
+The underdeveloped but upwardly mobile country of Galosh has need of a secret code in which to express its 
+diplomatic dispatches, so the head cryptographer proposed that first, all sequences of nonvowels (including spaces 
+and punctuation) be reversed. The letter “y” is NOT considered to be a vowel. Then, the entire string message 
+should be written backwards.
+
+A program is to be written so that a message sent from the Prime Minister to various aides can be decoded. Two 
+examples of messages and their encoded versions are:
+
+HELLO THERE.
+.ERE THOLLEH
+
+MAKE THAT EXTRA CHEESE. PEPPERONI GIVES ME HEARTBURN.
+RN.URTBAE HES MEVI GINOREPPE. PESEE CHAXTRET A THEKAM
+
+All messages will contain either the capital letters, digits (0-9) , a blank, or the following two punctuation 
+characters: . , and will be restricted to at most 60 characters. Your program should accept any number of 
+encoded messages from the file named message.dat and write their associated decoded results to the display.
