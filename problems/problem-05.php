@@ -13,3 +13,37 @@
 //You are to write an iterative program that will continually prompt the user to enter a positive integer until EOF has
 //been entered via the keyboard. For each number entered your program should output the persistence of the number.
 //Please note that the correct spelling of persistence is p-e-r-s-i-s-t-e-n-c-e. The word does not contain the letter “a”.
+
+class persistence {
+
+	public $myArray = array();
+
+	function persistence($int) {
+		//Forcing the type here so that the integer becomes a string
+		$myArray = (string)$int;
+		$length = count($myArray);
+
+		for ($i = 0; $i <= $length; $i++) {
+			$currentResult = $myArray[$i];
+			echo (($myArray[$length-$i] * $currentResult) . "\n");
+		}
+
+//	echo ($myArray[0] * $myArray[1] * $myArray[2]);
+
+	}
+
+	function multiply($i) {
+		if (isset($this->$myArray[$i])) {
+
+		}
+	}
+}
+
+
+persistence(715);
+
+
+//1) Find how many integers are in $i
+//2) Multiply each of them together
+//3) Take the result and repeat 2 and count how many times you've done 2
+//4) If the length of the result is 1, return how many times you've done 2
