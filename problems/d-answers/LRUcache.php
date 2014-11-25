@@ -20,16 +20,36 @@
  */
 class LRUCache {
 	public $maxItems;
+	public $cache = array();
+	public $cacheOrder = array();
 
 	public function __construct($maxItems = 10) {
 		$this->maxItems = $maxItems;
 	}
 
 	public function set($key, $value) {
+		if (count($this->cacheOrder) >= $this->maxItems) {
+			array_pop($this->cacheOrder);
+		}
 
+		$this->update($key);
+		$this->cache[$key] = $value;
 	}
 
 	public function get($key) {
+		if (isset($this->cache[$key])) {
+			$this->update($key);
+			return $this->cache[$key];
+		} else {
+			return false;
+		}
+	}
 
+	public function update($key) {
+		if (isset($this->cacheOrder[$key])) {
+			unset($this->cacheOrder[$key]);
+		}
+
+		array_unshift($cacheOrder, $key);
 	}
 }
