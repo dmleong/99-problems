@@ -2,7 +2,7 @@
 //Multiplying the digits of an integer and continuing the process gives the surprising result that the sequence of
 //products always arrives at a single digit number. For example,
 //
-//715 ---- 35 ---- 15 ---- 527 ---- 14 ---- 4
+//715 ---- 35 ---- 15
 //4000 ---- 0
 //9
 //
@@ -14,36 +14,61 @@
 //been entered via the keyboard. For each number entered your program should output the persistence of the number.
 //Please note that the correct spelling of persistence is p-e-r-s-i-s-t-e-n-c-e. The word does not contain the letter “a”.
 
-class persistence {
 
-	public $myArray = array();
+class Persistence {
+	public $persistence = 0;
+	public $result = 0;
+
+	function multiply($int) {
+		$integer = str_split($int);
+		$i = 0;
+		$result = array();
+		foreach ($integer as &$value) {
+			$value = $value * $integer[$i+1];
+			$i++;
+
+			if ($value > 0) {
+				array_push($result, $value);
+			}
+		}
+		unset($value);
+		$this->increment();
+		$val = array_product($result);
+
+		if ($val >= 10) {
+			$val = $this->multiply($val);
+			return $val;
+		} else {
+			return $val;
+		}
+	}
+
+	function increment() {
+		return $this->persistence++;
+	}
+
 
 	function persistence($int) {
-		//Forcing the type here so that the integer becomes a string
-		$myArray = (string)$int;
-		$length = count($myArray);
-
-		for ($i = 0; $i <= $length; $i++) {
-			$currentResult = $myArray[$i];
-			echo (($myArray[$length-$i] * $currentResult) . "\n");
+		if ($int < 10) {
+			echo 0;
 		}
 
-//	echo ($myArray[0] * $myArray[1] * $myArray[2]);
+		if ($int >= 10) {
+			$this->multiply($int);
+			$persistence = $this->increment();
+		}
+
+		echo "The persistence is " . $persistence;
 
 	}
 
-	function multiply($i) {
-		if (isset($this->$myArray[$i])) {
-
-		}
-	}
 }
 
+new Persistence(4000);
 
-persistence(715);
 
 
-//1) Find how many integers are in $i
-//2) Multiply each of them together
-//3) Take the result and repeat 2 and count how many times you've done 2
-//4) If the length of the result is 1, return how many times you've done 2
+//1) $int to string
+//2) if $int <= 10 return 0
+//3) if $int > 10 for y in x { product * = y }, increment persistence
+//3) if product >= 10 return 1 + persistence(product)
