@@ -1,7 +1,7 @@
 Multiplying the digits of an integer and continuing the process gives the surprising result that the sequence of 
 products always arrives at a single digit number. For example, 
 
-715 ---- 35 ---- 15 ---- 527 ---- 14 ---- 4 
+715 ---- 35 ---- 15 
 4000 ---- 0
 9
 
