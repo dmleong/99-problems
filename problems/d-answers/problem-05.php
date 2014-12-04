@@ -23,14 +23,12 @@ class Persistence {
 		$integer = str_split($int);
 		$result = array();
 
-
 		for ($i = 0; $i < count($integer); $i++) {
 			$value = $integer[$i] * $integer[$i+1];
 
 			if ($value > 0) {
 				array_push($result, $value);
 			}
-
 		}
 
 		$this->increment();
