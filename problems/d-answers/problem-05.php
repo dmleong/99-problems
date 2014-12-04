@@ -21,17 +21,18 @@ class Persistence {
 
 	function multiply($int) {
 		$integer = str_split($int);
-		$i = 0;
 		$result = array();
-		foreach ($integer as &$value) {
-			$value = $value * $integer[$i+1];
-			$i++;
+
+
+		for ($i = 0; $i < count($integer); $i++) {
+			$value = $integer[$i] * $integer[$i+1];
 
 			if ($value > 0) {
 				array_push($result, $value);
 			}
+
 		}
-		unset($value);
+
 		$this->increment();
 		$val = array_product($result);
 
@@ -43,6 +44,7 @@ class Persistence {
 		}
 	}
 
+
 	function increment() {
 		return $this->persistence++;
 	}
@@ -53,12 +55,10 @@ class Persistence {
 			echo 0;
 		}
 
-		if ($int >= 10) {
-			$this->multiply($int);
-			$persistence = $this->increment();
-		}
+		$this->multiply($int);
+		$persistence = $this->increment();
 
-		echo "The persistence is " . $persistence;
+		echo "The persistence is " . $persistence . "\n";
 
 	}
 
